@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: "EventCard",
   data() {
     return {
       event: {
@@ -30,16 +31,18 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .event-card {
   padding: 20px;
   margin-bottom: 24px;
   transition: all 0.2s linear;
   cursor: pointer;
-}
-.event-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2),
+      0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 .event-card > .title {
   margin: 0;
