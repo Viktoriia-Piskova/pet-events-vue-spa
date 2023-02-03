@@ -7,7 +7,7 @@
 
 <script>
 import EventCard from "@/components/EventCard.vue";
-import axios from "axios";
+import EventService from "@/services/EventService.js";
 export default {
   name: "EventsList",
   data() {
@@ -17,10 +17,7 @@ export default {
   },
   components: { EventCard },
   created() {
-    axios
-      .get(
-        "https://my-json-server.typicode.com/Viktoriia-Piskova/mock-database-vue2/events"
-      )
+    EventService.getEvents()
       .then((response) => {
         this.events = response.data;
       })
