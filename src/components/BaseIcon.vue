@@ -2,7 +2,7 @@
   <div class="icon-wrapper">
     <span v-html="svg"> </span>
     <span class="icon-description">
-      <slot></slot>
+      <slot>Default</slot>
     </span>
   </div>
 </template>
